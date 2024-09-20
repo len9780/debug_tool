@@ -1,1 +1,1 @@
-# esp_debug_tool
+Usage: python script.py <elf_file> <addresses_file>
