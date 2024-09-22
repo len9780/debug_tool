@@ -25,7 +25,7 @@ synthesis_input = texttospeech.SynthesisInput(text=text)
 # 設定語音參數
 voice = texttospeech.VoiceSelectionParams(
     language_code="cmn-TW",  # 中文
-    name="cmn-TW-Standard-A",  # 使用 WaveNet 模型
+    name="cmn-TW-Standard-A",  # 使用 輸出檔案WaveNet 模型
 )
 
 # 設定音頻配置
@@ -41,4 +41,4 @@ response = client.synthesize_speech(
 # 將合成的音頻寫入文件
 with open(args.mp3_out, "wb") as out:
     out.write(response.audio_content)
-    print("音頻內容已寫入 output.mp3")
+    print("音頻內容已寫入 ",args.mp3_out)
